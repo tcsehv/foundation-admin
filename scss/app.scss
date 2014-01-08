@@ -1,2 +1,153 @@
+@import "tcs_variables";
 @import "settings";
 @import "foundation";
+@import "../fonts/foundation-icons/foundation-icons.css";
+
+body {
+  line-height: 1rem;
+}
+
+a {
+  color: $orange;
+  &:hover {
+    color: darken($orange, 20%);
+  }
+}
+
+/* 100% height off canvas menu */
+body,html{
+  height:100%;
+  width:100%;
+}
+
+.page{
+  height:100%;
+}
+
+.off-canvas-wrap, .inner-wrap{
+  height:100%;
+}
+
+.inner-wrap .wrapper {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* off canvas menu icons */
+.off-canvas-wrap aside i,
+.right-off-canvas-toggle {
+  color: $white;
+  margin: $base-margin;
+  :hover {
+    color: $white;
+    opacity: .5;
+  }
+}
+
+/* icons */
+.main-section i[class^="fi"] {
+  opacity: .3;
+  margin-right: $base-margin/2;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+    a:hover {
+      color: darken($primary-color, 5%);
+    }
+    li.current a:hover {
+      color: $orange;
+    }
+}
+
+/* tabs content */
+.tabs-content > .content {
+  padding: 1.25rem;
+  width: 80%;
+  @media (max-width: 40em) {
+    width: 100%;
+  }
+}
+
+.tabs dd > a {
+  padding-left: 1rem;
+}
+
+.panel {
+  .header {
+    background-color: $orange;
+    padding: 5px $base-padding;
+    h4 {
+      color: $white;
+      font-size: 1.2rem;
+      margin: 0;
+      line-height: 27px;
+      font-weight: normal;
+      letter-spacing: $base-letter-spacing;
+    }
+  }
+  table { width: 100%;}
+  a.button { margin: 1.25rem;}
+  p { margin: $base-margin !important; }
+}
+
+.panel-nav {
+  position: absolute;
+  top: 10px;
+  right: $base-margin*2;
+  a { color: $white; }
+  i { margin-left: $base-padding; margin: 0 0 0 $base-margin/2 !important; }
+}
+
+.button {
+  border-radius: $global-radius;
+  font-family: join($button-font, $body-font-family);
+  letter-spacing: $base-letter-spacing;
+}
+
+.alert-box {
+  letter-spacing: $base-letter-spacing;
+  font-weight: 300;
+  .button {
+    margin-bottom: 0;
+    margin-top: $base-margin;
+  }
+  .close {
+    top: 23px;
+  }
+}
+
+.alert-box.header {
+  opacity: $base-opacity;
+}
+
+@keyframes slidein {
+  from {opacity: 0; margin-top: -160px;}
+  to {margin-top: -130px;}
+}
+
+@-webkit-keyframes slidein {
+  from {opacity: 0; margin-top: -160px;}
+  to {margin-top: -130px;}
+}
+
+.alertBoxWrapper {
+  @media (max-width: 40em) {
+    margin-top: auto;
+  }
+  @media (min-width: 40.063em) {
+    margin-top: -130px;
+    animation: slidein 2s;
+    position: absolute;
+    z-index: 9999;
+    right: 0.95rem;
+  }
+}
+
+footer {
+  margin-bottom: $base-margin;
+  font-size: .75rem;
+  color: $gray;
+  font-style: italic;
+}

@@ -1,0 +1,40 @@
+/* variables */
+$white: #ffffff;
+$green: #225626;
+$orange: #FF723F;
+$gray: #aaa;
+
+$base-margin: 1rem;
+$base-padding: 1rem;
+$base-opacity: .92;
+$base-letter-spacing: .5pt;
+/* end variables */
+
+/* set custom fonts and variables */
+$include-open-sans: false; // Do not use Open Sans as default font
+
+@font-face {
+  font-family: 'roboto-thin';
+  src: url('../fonts/Roboto/roboto_thin_macroman/Roboto-Thin-webfont.eot');
+  src: url('../fonts/Roboto/roboto_thin_macroman/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto/roboto_thin_macroman/Roboto-Thin-webfont.woff') format('woff'),
+  url('../fonts/Roboto/roboto_thin_macroman/Roboto-Thin-webfont.ttf') format('truetype'),
+  url('../fonts/Roboto/roboto_thin_macroman/Roboto-Thin-webfont.svg#robotothin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto-light';
+  src: url('../fonts/Roboto/roboto_light_macroman/Roboto-Light-webfont.eot');
+  src: url('../fonts/Roboto/roboto_light_macroman/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto/roboto_light_macroman/Roboto-Light-webfont.woff') format('woff'),
+  url('../fonts/Roboto/roboto_light_macroman/Roboto-Light-webfont.ttf') format('truetype'),
+  url('../fonts/Roboto/roboto_light_macroman/Roboto-Light-webfont.svg#robotolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$header-font: "roboto-thin";
+$button-font: "roboto-light";
