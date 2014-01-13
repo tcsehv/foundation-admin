@@ -41,7 +41,7 @@ $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
-$header-font-family: $header-font !default; // Do not include the Open Sans font
+$header-font-family: $custom-font !default; // Do not include the Open Sans font
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;
@@ -227,8 +227,8 @@ $crumb-font-color-current: $orange;
 // $clearing-arrow-color: $clearing-close-color;
 
 // We use these to style captions
-// $clearing-caption-font-color: #ccc;
-// $clearing-caption-font-size: 0.875em;
+$clearing-caption-font-color: $gray !important;
+$clearing-caption-font-size: 2rem;
 // $clearing-caption-padding: 10px 30px 20px;
 
 // We use these to make the image and carousel height and style
@@ -245,28 +245,28 @@ $crumb-font-color-current: $orange;
 // $f-dropdown-max-width: 200px;
 // $f-dropdown-height: auto;
 // $f-dropdown-max-height: none;
-// $f-dropdown-margin-top: 2px;
+$f-dropdown-margin-top: -2px;
 
 // We use this to control the background color
-// $f-dropdown-bg: #fff;
+$f-dropdown-bg: $primary-color;
 
 // We use this to set the border styles for dropdowns.
 // $f-dropdown-border-style: solid;
-// $f-dropdown-border-width: 1px;
-// $f-dropdown-border-color: darken(#fff, 20%);
+$f-dropdown-border-width: 0;
+$f-dropdown-border-color: $grayLight;
 
 // We use these to style the triangle pip.
-// $f-dropdown-triangle-size: 6px;
-// $f-dropdown-triangle-color: #fff;
+$f-dropdown-triangle-size: 0;
+// $f-dropdown-triangle-color: yellow;
 // $f-dropdown-triangle-side-offset: 10px;
 
 // We use these to control styles for the list elements.
 // $f-dropdown-list-style: none;
-// $f-dropdown-font-color: #555;
-// $f-dropdown-font-size: rem-calc(14);
-// $f-dropdown-list-padding: rem-calc(5, 10);
+$f-dropdown-font-color: $white;
+$f-dropdown-font-size: .8rem;
+$f-dropdown-list-padding: $base-padding*.8 $base-padding;
 // $f-dropdown-line-height: rem-calc(18);
-// $f-dropdown-list-hover-bg: #eeeeee  ;
+$f-dropdown-list-hover-bg: darken($primary-color, 3%);
 // $dropdown-mobile-default-float: 0;
 
 // We use this to control the styles for when the dropdown has custom content.
@@ -277,7 +277,7 @@ $crumb-font-color-current: $orange;
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to set the color of the pip in dropdown buttons
-// $dropdown-button-pip-color: #fff;
+// $dropdown-button-pip-color: yellow;
 // $dropdown-button-pip-color-alt: #333;
 
 // $button-pip-tny: rem-calc(6);
@@ -330,7 +330,7 @@ $crumb-font-color-current: $orange;
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
-// $form-label-font-size: rem-calc(14);
+$form-label-font-size: .8rem;
 // $form-label-font-weight: normal;
 // $form-label-font-color: lighten(#000, 30%);
 // $form-label-bottom-margin: rem-calc(8);
@@ -338,19 +338,19 @@ $crumb-font-color-current: $orange;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: rem-calc(14);
 // $input-bg-color: #fff;
-// $input-focus-bg-color: darken(#fff, 2%);
-// $input-border-color: darken(#fff, 20%);
-// $input-focus-border-color: darken(#fff, 40%);
+$input-focus-bg-color: none;
+$input-border-color: $grayLight;
+// $input-focus-border-color: none;
 // $input-border-style: solid;
 // $input-border-width: 1px;
 // $input-disabled-bg: #ddd;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-// $input-include-glowing-effect: true;
+$input-box-shadow: none;
+$input-include-glowing-effect: false;
 
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
-// $fieldset-border-color: #ddd;
+$fieldset-border-color: $grayLight;
 // $fieldset-padding: rem-calc(20);
 // $fieldset-margin: rem-calc(18 0);
 
@@ -495,7 +495,7 @@ $crumb-font-color-current: $orange;
 
 // Off Canvas Tab Bar Headers
 // $tabbar-header-color: #FFF;
-// $tabbar-header-weight: bold;
+//$tabbar-header-weight: normal;
 // $tabbar-header-line-height: $tabbar-height;
 // $tabbar-header-margin: 0;
 

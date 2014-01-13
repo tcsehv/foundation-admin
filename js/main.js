@@ -1,4 +1,9 @@
 $(document).ready( function() {
+    // Stretch Foundation Off canvas to full height of the page
+    $('a.left-off-canvas-toggle').click(function() {
+        $('.inner-wrap').css('min-height', $(window).height() + 'px');
+    });
+
     // Accordion panels
     $('.panel-nav').find("a[href^='#panel']").on('click', function () {
         var content = $(this).closest("div.panel").find("div.contentWrapper");
@@ -16,25 +21,52 @@ $(document).ready( function() {
 
     // Back to top button
     $('#top').on('click', function () {
-        $('.wrapper').animate({
+        $('body').animate({
             scrollTop: 0
         }, 800);
         return false;
     });
 
-    // Call the Fuel UX tree function
-    var treeDataSource = new TreeDataSource({
-        data: [
-            { name: 'Test Folder 1', type: 'folder', additionalParameters: { id: 'F1' } },
-            { name: 'Test Folder 2', type: 'folder', additionalParameters: { id: 'F2' } },
-            { name: 'Test Item 1', type: 'item', additionalParameters: { id: 'I1' } },
-            { name: 'Test Item 2', type: 'item', additionalParameters: { id: 'I2' } }
-        ],
-        delay: 400
+    // Set datepicker
+    $('#datepicker1').fdatepicker();
+
+    // Set JStree
+    $('#tree').jstree({
+        'core' : {
+            'data' : [
+                { "id" : "ajson1", "parent" : "#", "text" : "Simple root node" },
+                { "id" : "ajson2", "parent" : "#", "text" : "Root node 2" },
+                { "id" : "ajson3", "parent" : "ajson2", "text" : "Child 1", "type" : "page"},
+                { "id" : "ajson4", "parent" : "ajson2", "text" : "Child 2", "type" : "page" },
+                { "id" : "ajson5", "parent" : "ajson2", "text" : "Child 3", "type" : "media" }
+            ],
+            'check_callback' : true,
+            'themes' : {
+                'dots' : false
+            }
+        },
+        'plugins' : [ "dnd", "types"],
+        'types' : {
+            "default" : {
+                "icon" : "fi-folder"
+            },
+            "page" : {
+                "icon" : "fi-page"
+            },
+            "media" : {
+                "icon" : "fi-photo"
+            }
+        }
     });
 
-    $('#MyTree').tree({ dataSource: treeDataSource });
-    $('#myDatepicker').datepicker();
+    // Listen for changes on the tree
+    $('#tree').on('changed.jstree', function (e, data) {
+        //console.log(data.selected);
+    });
+
+    // Interact with the tree
+    $('#tree').jstree(true).select_node('child_node');
+
+    // End JStree
+
 });
-
-

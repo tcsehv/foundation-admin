@@ -2,6 +2,7 @@
 @import "settings";
 @import "foundation";
 @import "../fonts/foundation-icons/foundation-icons.css";
+@import "jstree";
 
 body {
   line-height: 1rem;
@@ -14,24 +15,14 @@ a {
   }
 }
 
-/* 100% height off canvas menu */
-body,html{
-  height:100%;
-  width:100%;
+/* off canvas menu links */
+ul.off-canvas-list li a {
+  font-family: join($custom-font, $body-font-family);
+  letter-spacing: $base-letter-spacing;
 }
 
-.page{
-  height:100%;
-}
-
-.off-canvas-wrap, .inner-wrap{
-  height:100%;
-}
-
-.inner-wrap .wrapper {
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
+ul.off-canvas-list li label {
+  letter-spacing: $base-letter-spacing;
 }
 
 /* off canvas menu icons */
@@ -45,10 +36,26 @@ body,html{
   }
 }
 
+/* dropdown buttons */
+.f-dropdown li a {
+  border-top: 2px solid darken($primary-color, 3%);
+  font-family: join($custom-font, $body-font-family);
+  letter-spacing: $base-letter-spacing;
+}
+
 /* icons */
 .main-section i[class^="fi"] {
   opacity: .3;
   margin-right: $base-margin/2;
+}
+
+/* datepicker */
+.datepicker {
+  td.active.day, .datepicker th.active.day {
+    background-color: $primary-color;
+    color: $white;
+  }
+  i { color: $primary-color; }
 }
 
 /* breadcrumbs */
@@ -61,6 +68,12 @@ body,html{
     }
 }
 
+/* tabs nav */
+.tabs dd > a {
+  padding-left: 1rem;
+  letter-spacing: $base-letter-spacing;
+}
+
 /* tabs content */
 .tabs-content > .content {
   padding: 1.25rem;
@@ -68,12 +81,10 @@ body,html{
   @media (max-width: 40em) {
     width: 100%;
   }
+  p { margin: 0 0 $base-margin 0;}
 }
 
-.tabs dd > a {
-  padding-left: 1rem;
-}
-
+/* panels */
 .panel {
   .header {
     background-color: $orange;
@@ -84,12 +95,14 @@ body,html{
       margin: 0;
       line-height: 27px;
       font-weight: normal;
+      font-family: $panel-header-font;
       letter-spacing: $base-letter-spacing;
     }
   }
   table { width: 100%;}
   a.button { margin: 1.25rem;}
-  p { margin: $base-margin !important; }
+  p { margin: $base-margin; }
+  h1,h2,h3,h4,h5,h6 {margin-bottom: $base-margin*2; }
 }
 
 .panel-nav {
@@ -97,15 +110,17 @@ body,html{
   top: 10px;
   right: $base-margin*2;
   a { color: $white; }
-  i { margin-left: $base-padding; margin: 0 0 0 $base-margin/2 !important; }
+  i { margin: 0 0 0 $base-margin/2 !important; }
 }
 
+/* buttons */
 .button {
   border-radius: $global-radius;
-  font-family: join($button-font, $body-font-family);
+  font-family: join($custom-font, $body-font-family);
   letter-spacing: $base-letter-spacing;
 }
 
+/* alert boxes */
 .alert-box {
   letter-spacing: $base-letter-spacing;
   font-weight: 300;
@@ -145,9 +160,43 @@ body,html{
   }
 }
 
+/* tooltips */
+.tip {
+  margin: 0 $base-margin;
+  color: $orange;
+  text-decoration: none;
+  border-bottom: 0;
+  &:hover {
+    text-decoration: none;
+    border-bottom: 0;
+    color: darken($orange, 20%);
+  }
+}
+
+/* no margin left */
+.ml {
+  margin-left: 0 !important;
+}
+
+/* lightbox thumbs */
+[data-clearing] li {
+  margin: $base-margin $base-margin 0 0;
+  @include img-border;
+}
+
+/* lightbox caption */
+.clearing-caption {
+  opacity: .6;
+}
+
+/* block grid */
+ul[class*=block-grid] li img {
+  @include img-border;
+}
+
 footer {
   margin-bottom: $base-margin;
-  font-size: .75rem;
+  font-size: .8rem;
   color: $gray;
   font-style: italic;
 }
