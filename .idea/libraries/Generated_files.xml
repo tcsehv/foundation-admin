@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/min/main.min.js" />
+        <item url="file://$PROJECT_DIR$/js/min/datepicker.min.js" />
+        <item url="file://$PROJECT_DIR$/js/min/select2.min.js" />
+        <item url="file://$PROJECT_DIR$/js/jstree.min.min.js" />
+        <item url="file://$PROJECT_DIR$/js/modernizr.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/app.min.js" />
+      <root url="file://$PROJECT_DIR$/js/app.min.js" />
+      <root url="file://$PROJECT_DIR$/js/jstree.min.min.js" />
+      <root url="file://$PROJECT_DIR$/js/min/main.min.js" />
+      <root url="file://$PROJECT_DIR$/js/min/datepicker.min.js" />
+      <root url="file://$PROJECT_DIR$/js/min/select2.min.js" />
+      <root url="file://$PROJECT_DIR$/js/jstree.min.min.js" />
+      <root url="file://$PROJECT_DIR$/js/min/modernizr.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

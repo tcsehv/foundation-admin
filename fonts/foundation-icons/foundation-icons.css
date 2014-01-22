@@ -307,7 +307,6 @@
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   text-decoration: inherit;
-  color: $white;
   font-size: 1rem;
 }
 

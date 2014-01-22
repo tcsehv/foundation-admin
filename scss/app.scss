@@ -3,6 +3,8 @@
 @import "foundation";
 @import "../fonts/foundation-icons/foundation-icons.css";
 @import "jstree";
+@import "select2";
+@import "datepicker.scss";
 
 body {
   line-height: 1rem;
@@ -15,6 +17,11 @@ a {
   }
 }
 
+/* labels in forms */
+label {
+  margin-top: $base-margin;
+}
+
 /* off canvas menu links */
 ul.off-canvas-list li a {
   font-family: join($custom-font, $body-font-family);
@@ -25,28 +32,48 @@ ul.off-canvas-list li label {
   letter-spacing: $base-letter-spacing;
 }
 
-/* off canvas menu icons */
-.off-canvas-wrap aside i,
-.right-off-canvas-toggle {
+/* right off canvas toggle button */
+a.right-off-canvas-toggle {
   color: $white;
-  margin: $base-margin;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
   :hover {
     color: $white;
     opacity: .5;
   }
+  i { width: 100%; display: block; opacity: 1;}
 }
 
 /* dropdown buttons */
-.f-dropdown li a {
-  border-top: 2px solid darken($primary-color, 3%);
-  font-family: join($custom-font, $body-font-family);
-  letter-spacing: $base-letter-spacing;
+.f-dropdown {
+    border-radius: 0 3px 3px 3px;
+    li:last-child:focus, li:last-child:hover {border-radius: 0 3px 3px 3px;}
+    a {
+    border-top: 2px solid darken($primary-color, 3%);
+    font-family: join($custom-font, $body-font-family);
+    letter-spacing: $base-letter-spacing;
+  }
+}
+
+.dropdown.button.small:before {
+  right: 1.9rem;
 }
 
 /* icons */
-.main-section i[class^="fi"] {
-  opacity: .3;
+i[class^="fi"] {
+  opacity: $base-opacity;
   margin-right: $base-margin/2;
+}
+
+/* dropdown icon */
+.dropdown:before {
+  opacity: $base-opacity;
+}
+
+.button i[class^="fi"] {
+  margin-right: .2rem;
 }
 
 /* datepicker */
@@ -113,6 +140,11 @@ ul.off-canvas-list li label {
   i { margin: 0 0 0 $base-margin/2 !important; }
 }
 
+/* js tree */
+.jstree-default {
+  letter-spacing: $base-letter-spacing;
+}
+
 /* buttons */
 .button {
   border-radius: $global-radius;
@@ -120,10 +152,23 @@ ul.off-canvas-list li label {
   letter-spacing: $base-letter-spacing;
 }
 
+/* saving progress buttons */
+.button i.fi-loop:before {
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
 /* alert boxes */
 .alert-box {
   letter-spacing: $base-letter-spacing;
   font-weight: 300;
+  padding-right: 2rem;
   .button {
     margin-bottom: 0;
     margin-top: $base-margin;
@@ -134,7 +179,7 @@ ul.off-canvas-list li label {
 }
 
 .alert-box.header {
-  opacity: $base-opacity;
+  opacity: .92;
 }
 
 @keyframes slidein {
@@ -173,9 +218,19 @@ ul.off-canvas-list li label {
   }
 }
 
+/* EXTRA EXCEPTION CLASSES */
 /* no margin left */
-.ml {
+.no-ml {
   margin-left: 0 !important;
+}
+.extra-ml {
+  margin-left: $base-margin / 2;
+}
+/* END EXTRA EXCEPTION CLASSES */
+
+/* back to top button */
+#top {
+  width: 48px;
 }
 
 /* lightbox thumbs */
@@ -189,6 +244,23 @@ ul.off-canvas-list li label {
   opacity: .6;
 }
 
+/* select2 */
+.select2-container {
+  width: 100%;
+  max-width: 400px;
+  margin: $base-margin 0;
+}
+
+.select2-search input.select2-focused {
+  background: $white image-url('select2.png') no-repeat 100% -22px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)  {
+  .select2-search input.select2-focused {
+    background-image: image-url('select2x2.png') !important;
+  }
+}
+
 /* block grid */
 ul[class*=block-grid] li img {
   @include img-border;
@@ -196,7 +268,56 @@ ul[class*=block-grid] li img {
 
 footer {
   margin-bottom: $base-margin;
-  font-size: .8rem;
+  font-size: $base-smaller-fsize;
   color: $gray;
   font-style: italic;
+}
+
+/* display off-canvas menu on =>1600px screens */
+.big {
+  div.inner-wrap {
+    width: 72%;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+    left: 14%;
+  }
+  aside[class*=canvas-menu] {
+    width: 20%;
+  }
+  section.left-small, section.right-small {
+    display: none;
+  }
+  section.tab-bar-section.middle {
+    left: .8rem;
+    width: 100%;
+    padding-right: 0;
+  }
+  aside[class*=off-canvas-menu] i{
+    margin-left: 1rem;
+  }
+  #menu-collapse-btn {
+    right: 1rem;
+  }
+}
+
+/* menu collapse button */
+#menu-collapse-btn {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: $white;
+  background-color: transparent;
+}
+
+/* set other z-index to get the modal on top of the off-canvas menu */
+@media (min-width: 1600px) {
+  .reveal-modal-bg {z-index: 1045;}
+  .reveal-modal {z-index: 1050;}
 }
