@@ -8,6 +8,9 @@
 
 body {
   line-height: 1rem;
+  h1:first-child {
+    margin-top: $base-margin;
+  }
 }
 
 a {
@@ -17,9 +20,12 @@ a {
   }
 }
 
-/* labels in forms */
-label {
-  margin-top: $base-margin;
+/* forms */
+form {
+  a {font-size: $base-smaller-fsize;}
+  fieldset .button {margin:0;margin-top:$base-margin;}
+  small {margin: 4px 0 $base-margin 10px; color: $alert-color; font-size: 70%;}
+  label {margin-top: $base-margin;}
 }
 
 /* off canvas menu links */
@@ -61,10 +67,13 @@ a.right-off-canvas-toggle {
   right: 1.9rem;
 }
 
-/* icons */
+/* iconss */
 i[class^="fi"] {
   opacity: $base-opacity;
   margin-right: $base-margin/2;
+  &.alt-margin {
+    margin: 0 $base-margin/3;
+  }
 }
 
 /* dropdown icon */
@@ -87,6 +96,7 @@ i[class^="fi"] {
 
 /* breadcrumbs */
 .breadcrumbs {
+    margin-top: $base-margin;
     a:hover {
       color: darken($primary-color, 5%);
     }
@@ -108,6 +118,7 @@ i[class^="fi"] {
   @media (max-width: 40em) {
     width: 100%;
   }
+  form { margin: 0;}
   p { margin: 0 0 $base-margin 0;}
 }
 
@@ -126,10 +137,13 @@ i[class^="fi"] {
       letter-spacing: $base-letter-spacing;
     }
   }
+  ul, ol {margin: $base-margin; li{ margin-left:$base-margin;}}
+  ul.no-bullet li {margin-left: 0;}
   table { width: 100%;}
   a.button { margin: 1.25rem;}
   p { margin: $base-margin; }
   h1,h2,h3,h4,h5,h6 {margin-bottom: $base-margin*2; }
+  form {margin: $base-margin;}
 }
 
 .panel-nav {
@@ -143,6 +157,7 @@ i[class^="fi"] {
 /* js tree */
 .jstree-default {
   letter-spacing: $base-letter-spacing;
+  ul {margin: 0;}
 }
 
 /* buttons */
@@ -150,9 +165,28 @@ i[class^="fi"] {
   border-radius: $global-radius;
   font-family: join($custom-font, $body-font-family);
   letter-spacing: $base-letter-spacing;
+  margin: $base-margin $base-margin $base-margin 0;
 }
 
-/* saving progress buttons */
+.button.right {
+  margin-left: $base-margin;
+  margin-right: 0;
+}
+
+/* tables */
+table {
+  @media (max-width:64em) {
+    tr td, thead tr th {font-size: $base-font-size * .8;}
+  }
+  width: 100%;
+  td a.button {margin: 0 !important;}
+  i.fi-camera {
+    margin: 0;
+    &:before {font-size: $base-font-size * 2; }
+  }
+}
+
+/* saving progress buttonss */
 .button i.fi-loop:before {
   -webkit-animation:spin 2s linear infinite;
   -moz-animation:spin 2s linear infinite;
@@ -163,25 +197,7 @@ i[class^="fi"] {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-
 /* alert boxes */
-.alert-box {
-  letter-spacing: $base-letter-spacing;
-  font-weight: 300;
-  padding-right: 2rem;
-  .button {
-    margin-bottom: 0;
-    margin-top: $base-margin;
-  }
-  .close {
-    top: 23px;
-  }
-}
-
-.alert-box.header {
-  opacity: .92;
-}
-
 @keyframes slidein {
   from {opacity: 0; margin-top: -160px;}
   to {margin-top: -130px;}
@@ -197,12 +213,30 @@ i[class^="fi"] {
     margin-top: auto;
   }
   @media (min-width: 40.063em) {
-    margin-top: -130px;
+    margin-top: -175px;
     animation: slidein 2s;
     position: absolute;
     z-index: 9999;
-    right: 0.95rem;
+    right: 0;
   }
+}
+
+.alert-box {
+  letter-spacing: $base-letter-spacing;
+  font-weight: 300;
+  padding-right: 2rem;
+  margin-right: $base-margin;
+  .button {
+    margin-bottom: 0;
+    margin-top: $base-margin;
+  }
+  .close {
+    top: 23px;
+  }
+}
+
+.alert-box.header {
+  opacity: .92;
 }
 
 /* tooltips */

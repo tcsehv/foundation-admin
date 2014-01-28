@@ -2,6 +2,7 @@
 if(window.innerWidth >= 1600) {
     $("div.off-canvas-wrap").addClass("move-right big");
     $("#menu-collapse-btn").show();
+    $('.inner-wrap').css('min-height', $(window).height() + 'px');
 }
 
 $(document).ready( function() {
@@ -10,6 +11,7 @@ $(document).ready( function() {
         if(window.innerWidth >= 1600) {
             $("div.off-canvas-wrap").addClass("move-right big");
             $("#menu-collapse-btn").show();
+            $('.inner-wrap').css('min-height', $(window).height() + 'px');
         }
         else {
             $("div.off-canvas-wrap").removeClass("move-right big");
@@ -31,7 +33,7 @@ $(document).ready( function() {
     });
 
     // Stretch Foundation Off canvas to full height of the page
-    $('a.left-off-canvas-toggle').click(function() {
+    $('a[class*="off-canvas-toggle"]').click(function() {
         $('.inner-wrap').css('min-height', $(window).height() + 'px');
     });
 
@@ -58,45 +60,45 @@ $(document).ready( function() {
         return false;
     });
 
-    // Set datepicker
-    $('#datepicker1').fdatepicker();
+        // Set datepicker
+     $('#datepicker1').fdatepicker();
 
-    // Set JStree
-    $('#tree').jstree({
-        'core' : {
-            'data' : [
-                { "id" : "ajson1", "parent" : "#", "text" : "Simple root node" },
-                { "id" : "ajson2", "parent" : "#", "text" : "Root node 2" },
-                { "id" : "ajson3", "parent" : "ajson2", "text" : "Child 1", "type" : "page" },
-                { "id" : "ajson4", "parent" : "ajson2", "text" : "Child 2", "type" : "page" },
-                { "id" : "ajson5", "parent" : "ajson2", "text" : "Child 3", "type" : "media" }
-            ],
-            'check_callback' : true,
-            'themes' : {
-                'dots' : false
-            }
-        },
-        'plugins' : [ "dnd", "types"],
-        'types' : {
-            "default" : {
-                "icon" : "fi-folder"
-            },
-            "page" : {
-                "icon" : "fi-page"
-            },
-            "media" : {
-                "icon" : "fi-photo"
-            }
-        }
-    });
+     // Set JStree
+     $('#tree').jstree({
+     'core' : {
+     'data' : [
+     { "id" : "ajson1", "parent" : "#", "text" : "Simple root node" },
+     { "id" : "ajson2", "parent" : "#", "text" : "Root node 2" },
+     { "id" : "ajson3", "parent" : "ajson2", "text" : "Child 1", "type" : "page" },
+     { "id" : "ajson4", "parent" : "ajson2", "text" : "Child 2", "type" : "page" },
+     { "id" : "ajson5", "parent" : "ajson2", "text" : "Child 3", "type" : "media" }
+     ],
+     'check_callback' : true,
+     'themes' : {
+     'dots' : false
+     }
+     },
+     'plugins' : [ "dnd", "types"],
+     'types' : {
+     "default" : {
+     "icon" : "fi-folder"
+     },
+     "page" : {
+     "icon" : "fi-page"
+     },
+     "media" : {
+     "icon" : "fi-photo"
+     }
+     }
+     });
 
-    // Listen for changes on the tree
-    $('#tree').on('changed.jstree', function (e, data) {
-        //console.log(data.selected);
-    });
+     // Listen for changes on the tree
+     $('#tree').on('changed.jstree', function (e, data) {
+     //console.log(data.selected);
+     });
 
-    // Interact with the JStree
-    $('#tree').jstree(true).select_node('child_node');
+     // Interact with the JStree
+     $('#tree').jstree(true).select_node('child_node');
 
     // Modal
     $("body").on('click', "#close-modal", function(){
