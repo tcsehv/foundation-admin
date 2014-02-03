@@ -848,15 +848,15 @@ $table-border-size: 0;
 // $table-border-color: #ddd;
 
 // These control the table head styles
-// $table-head-bg: #f5f5f5  ;
+// $table-head-bg: #f5f5f5;
 $table-head-font-size: 1rem;
 // $table-head-font-color: #222;
 // $table-head-font-weight: bold;
-$table-head-padding: $base-padding;
+$table-head-padding: $base-padding/2;
 
 // These control the row padding and font styles
-$table-row-padding: $base-padding;
-$table-row-font-size: 1rem;
+$table-row-padding: $base-padding/2;
+$table-row-font-size: $base-smaller-fsize;
 // $table-row-font-color: #222;
 $table-line-height: 1.6;
 

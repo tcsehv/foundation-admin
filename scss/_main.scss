@@ -1,0 +1,348 @@
+body {
+  line-height: 1rem;
+  h1:first-child {
+    margin-top: $base-margin;
+  }
+}
+
+a {
+  color: $orange;
+  &:hover {
+    color: darken($orange, 20%);
+  }
+}
+
+/* forms */
+form {
+  a {font-size: $base-smaller-fsize;}
+  fieldset .button {margin:0;margin-top:$base-margin;}
+  small {margin: 4px 0 $base-margin 10px; color: $alert-color; font-size: 70%; letter-spacing: .3pt;}
+  label {margin-top: $base-margin; letter-spacing: $base-letter-spacing;}
+}
+
+/* off canvas menu links */
+ul.off-canvas-list li a {
+  font-family: join($custom-font, $body-font-family);
+  letter-spacing: $base-letter-spacing;
+}
+
+ul.off-canvas-list li label {
+  letter-spacing: $base-letter-spacing;
+}
+
+/* right off canvas toggle button */
+a.right-off-canvas-toggle {
+  color: $white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  :hover {
+    color: $white;
+    opacity: .5;
+  }
+  i { width: 100%; display: block; opacity: 1;}
+}
+
+/* dropdown buttons */
+.f-dropdown {
+  border-radius: 0 3px 3px 3px;
+  li:last-child:focus, li:last-child:hover {border-radius: 0 3px 3px 3px;}
+  a {
+    border-top: 2px solid darken($primary-color, 3%);
+    font-family: join($custom-font, $body-font-family);
+    letter-spacing: $base-letter-spacing;
+  }
+}
+
+.dropdown.button.small:before {
+  right: 1.9rem;
+}
+
+/* iconss */
+i[class^="fi"] {
+  opacity: $base-opacity;
+  margin-right: $base-margin/2;
+  &.alt-margin {
+    margin: 0 $base-margin/3;
+  }
+}
+
+/* dropdown icon */
+.dropdown:before {
+  opacity: $base-opacity;
+}
+
+.button i[class^="fi"] {
+  margin-right: .2rem;
+}
+
+/* datepicker */
+.datepicker {
+  td.active.day, .datepicker th.active.day {
+    background-color: $primary-color;
+    color: $white;
+  }
+  i { color: $primary-color; }
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  margin-top: $base-margin;
+  a:hover {
+    color: darken($primary-color, 5%);
+  }
+  li.current a:hover {
+    color: $orange;
+  }
+}
+
+/* tabs nav */
+.tabs dd > a {
+  padding-left: 1rem;
+  letter-spacing: $base-letter-spacing;
+}
+
+/* tabs content */
+.tabs-content > .content {
+  padding: 1.25rem;
+  width: 80%;
+  @media (max-width: 40em) {
+    width: 100%;
+  }
+  form { margin: 0;}
+  p { margin: 0 0 $base-margin 0;}
+}
+
+/* panels */
+.panel {
+  .header {
+    background-color: $orange;
+    padding: 5px $base-padding;
+    h4 {
+      color: $white;
+      font-size: 1.2rem;
+      margin: 0;
+      line-height: 27px;
+      font-weight: normal;
+      font-family: $panel-header-font;
+      letter-spacing: $base-letter-spacing;
+    }
+  }
+  ul, ol {margin: $base-margin; li{ margin-left:$base-margin;}}
+  ul.no-bullet li {margin-left: 0;}
+  ul.f-dropdown {margin:-2px 0 0 0; li{margin:0;}}
+  table { width: 100%;}
+  a.button { margin: 1.25rem;}
+  p { margin: $base-margin; }
+  h1,h2,h3,h4,h5,h6 {margin-bottom: $base-margin*2; }
+  form {margin: $base-margin;}
+}
+
+.panel-nav {
+  position: absolute;
+  top: 10px;
+  right: $base-margin*2;
+  a { color: $white; }
+  i { margin: 0 0 0 $base-margin/2 !important; }
+}
+
+/* js tree */
+.jstree-default {
+  letter-spacing: $base-letter-spacing;
+  ul {margin: 0;}
+}
+
+/* buttons */
+.button {
+  border-radius: $global-radius;
+  font-family: join($custom-font, $body-font-family);
+  letter-spacing: $base-letter-spacing;
+  margin: $base-margin $base-margin $base-margin 0;
+}
+
+.button.right {
+  margin-left: $base-margin;
+  margin-right: 0;
+}
+
+/* tables */
+table {
+  thead tr th, tr td {font-size: $base-smaller-fsize; letter-spacing: $base-letter-spacing;}
+  width: 100%;
+  td a.button {margin: 0 !important;}
+  i.fi-camera {
+    margin: 0;
+    &:before {font-size: $base-font-size * 2; }
+  }
+}
+
+/* saving progress buttonss */
+.button i.fi-loop:before {
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+/* alert boxes */
+@keyframes slidein {
+  from {opacity: 0; margin-top: -160px;}
+  to {margin-top: -130px;}
+}
+
+@-webkit-keyframes slidein {
+  from {opacity: 0; margin-top: -160px;}
+  to {margin-top: -130px;}
+}
+
+.alertBoxWrapper {
+  @media (max-width: 40em) {
+    margin-top: auto;
+  }
+  @media (min-width: 40.063em) {
+    margin-top: -175px;
+    animation: slidein 2s;
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+  }
+}
+
+.alert-box {
+  letter-spacing: $base-letter-spacing;
+  font-weight: 300;
+  padding-right: 2rem;
+  margin-right: $base-margin;
+  .button {
+    margin-bottom: 0;
+    margin-top: $base-margin;
+  }
+  .close {
+    top: 23px;
+  }
+}
+
+.alert-box.header {
+  opacity: .92;
+}
+
+/* tooltips */
+.tip {
+  margin: 0 $base-margin;
+  color: $orange;
+  text-decoration: none;
+  border-bottom: 0;
+  &:hover {
+    text-decoration: none;
+    border-bottom: 0;
+    color: darken($orange, 20%);
+  }
+}
+
+/* EXTRA EXCEPTION CLASSES */
+/* no margin left */
+.no-ml {
+  margin-left: 0 !important;
+}
+.extra-ml {
+  margin-left: $base-margin / 2;
+}
+/* END EXTRA EXCEPTION CLASSES */
+
+/* back to top button */
+#top {
+  width: 48px;
+}
+
+/* lightbox thumbs */
+[data-clearing] li {
+  margin: $base-margin $base-margin 0 0;
+  @include img-border;
+}
+
+/* lightbox caption */
+.clearing-caption {
+  opacity: .6;
+}
+
+/* select2 */
+.select2-container {
+  width: 100%;
+  max-width: 400px;
+  margin: $base-margin 0;
+}
+
+.select2-search input.select2-focused {
+  background: $white image-url('select2.png') no-repeat 100% -22px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)  {
+  .select2-search input.select2-focused {
+    background-image: image-url('select2x2.png') !important;
+  }
+}
+
+/* block grid */
+ul[class*=block-grid] li img {
+  @include img-border;
+}
+
+footer {
+  margin-bottom: $base-margin;
+  font-size: $base-smaller-fsize;
+  color: $gray;
+  font-style: italic;
+}
+
+/* display off-canvas menu on =>1600px screens */
+.big {
+  div.inner-wrap {
+    width: 72%;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+    left: 14%;
+  }
+  aside[class*=canvas-menu] {
+    width: 20%;
+  }
+  section.left-small, section.right-small {
+    display: none;
+  }
+  section.tab-bar-section.middle {
+    left: .8rem;
+    width: 100%;
+    padding-right: 0;
+  }
+  aside[class*=off-canvas-menu] i{
+    margin-left: 1rem;
+  }
+  #menu-collapse-btn {
+    right: 1rem;
+  }
+}
+
+/* menu collapse button */
+#menu-collapse-btn {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: $white;
+  background-color: transparent;
+}
+
+/* set other z-index to get the modal on top of the off-canvas menu */
+@media (min-width: 1600px) {
+  .reveal-modal-bg {z-index: 1045;}
+  .reveal-modal {z-index: 1050;}
+}

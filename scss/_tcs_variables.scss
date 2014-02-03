@@ -9,8 +9,10 @@ $base-margin: 1.25rem;
 $base-padding: 1.25rem;
 $base-opacity: .3;
 $base-letter-spacing: .5pt;
-$base-smaller-fsize: .875rem;
+$base-smaller-fsize: .82rem;
 /* end variables */
+
+$button-font-sml: $base-smaller-fsize;
 
 /* set custom fonts and variables */
 $include-open-sans: false; // Do not use Open Sans as default font
