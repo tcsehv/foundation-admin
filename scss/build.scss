@@ -1,6 +1,8 @@
+@import "../../bower_components/foundation/scss/normalize";
+@import "../../bower_components/jstree/dist/themes/default/style.css";
 @import "tcs_variables";
 @import "settings";
-@import "foundation";
+@import "../../bower_components/foundation/scss/foundation";
 @import "../fonts/foundation-icons/foundation-icons.css";
 @import "jstree";
 @import "select2";
