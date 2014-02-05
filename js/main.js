@@ -20,6 +20,12 @@ $(document).ready( function() {
     });
 
     // Menu collapse switcher
+    // Set unique href
+    $('.panel').each(function (i) {
+        $(this).find('.panel-nav a').attr('href', '#panel-'+ i);
+        $(this).find('.contentWrapper .content').attr('id', 'panel-'+ i);
+    });
+
     $("#menu-collapse-btn").on("click", function(){
         var content = $("div.off-canvas-wrap");
         if (content.hasClass("move-right big")){
