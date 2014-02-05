@@ -166,6 +166,23 @@ i[class^="fi"] {
   margin-right: 0;
 }
 
+.button-nav .button.right {
+  margin-top: 0;
+}
+
+/* upload button jQuery File Upload */
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
 /* tables */
 table {
   thead tr th, tr td {font-size: $base-smaller-fsize; letter-spacing: $base-letter-spacing;}
