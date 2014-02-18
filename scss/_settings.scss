@@ -583,14 +583,14 @@ $off-canvas-link-padding: 1rem;
 
 // We use these to control the pagination container
 // $pagination-height: rem-calc(24);
-// $pagination-margin: rem-calc(-5);
+$pagination-margin: $base-margin;
 
 // We use these to set the list-item properties
 // $pagination-li-float: $default-float;
 // $pagination-li-height: rem-calc(24);
 // $pagination-li-font-color: #222;
 // $pagination-li-font-size: rem-calc(14);
-// $pagination-li-margin: rem-calc(5);
+$pagination-li-margin: 0;
 
 // We use these for the pagination anchor links
 // $pagination-link-pad: rem-calc(1 10 1);
@@ -691,7 +691,7 @@ $panel-padding: 0;
 
 // We use this to se the prog bar height
 // $progress-bar-height: rem-calc(25);
-// $progress-bar-color: #f6f6f6  ;
+$progress-bar-color: $grayLight  ;
 
 // We use these to control the border styles
 // $progress-bar-border-color: darken(#fff, 20%);

@@ -12,18 +12,56 @@ a {
   }
 }
 
+sub {
+  margin: $base-margin;
+  display: block;
+  line-height: 1rem;
+  letter-spacing: $base-letter-spacing;
+}
+
+sup {
+  color: $orange;
+  margin-left: $base-margin/4;
+}
+
 /* forms */
 form {
   a {font-size: $base-smaller-fsize;}
   fieldset .button {margin:0;margin-top:$base-margin;}
   small {margin: 4px 0 $base-margin 10px; color: $alert-color; font-size: 70%; letter-spacing: .3pt;}
-  label {margin-top: $base-margin; letter-spacing: $base-letter-spacing;}
+  label {letter-spacing: $base-letter-spacing;}
+  input[type=file] {margin: $base-margin/2 $base-margin $base-margin 0;}
+  input[type=checkbox], input[type=radio], select {
+    margin-right: $base-margin/2; cursor: pointer;
+  }
+  label.radio {margin-top: .7rem;}
+  label.radio:last-child, label.checkbox:last-child { margin-bottom: $base-margin;}
+  input[type=checkbox] {margin-top: .8rem;}
+}
+
+.rowWrapper .row {
+  position: relative;
+}
+
+/* remove field button in rowWrapper forms */
+.alert.absolute {
+  position: absolute;
+  line-height: 0;
+  right: $base-margin;
+  top: -$base-margin;
+}
+
+/* fileupload button */
+#fileupload {
+  fieldset .button { margin-right: $base-margin; margin-top: 0;}
+  .progress {margin-top: $base-margin;}
 }
 
 /* off canvas menu links */
 ul.off-canvas-list li a {
   font-family: join($custom-font, $body-font-family);
   letter-spacing: $base-letter-spacing;
+  i {width: 16px;display:block;float:left;}
 }
 
 ul.off-canvas-list li label {
@@ -36,7 +74,7 @@ a.right-off-canvas-toggle {
   display: block;
   width: 100%;
   height: 100%;
-  text-align: center;
+  text-align: left;
   :hover {
     color: $white;
     opacity: .5;
@@ -53,6 +91,7 @@ a.right-off-canvas-toggle {
     font-family: join($custom-font, $body-font-family);
     letter-spacing: $base-letter-spacing;
   }
+  &:after {border: none;}
 }
 
 .dropdown.button.small:before {
@@ -106,7 +145,7 @@ i[class^="fi"] {
 /* tabs content */
 .tabs-content > .content {
   padding: 1.25rem;
-  width: 80%;
+  width: 100%;
   @media (max-width: 40em) {
     width: 100%;
   }
@@ -166,7 +205,7 @@ i[class^="fi"] {
   margin-right: 0;
 }
 
-.button-nav .button.right {
+.button-nav .button {
   margin-top: 0;
 }
 
@@ -192,6 +231,8 @@ table {
     margin: 0;
     &:before {font-size: $base-font-size * 2; }
   }
+  border-collapse: inherit;
+  border-spacing: 3px;
 }
 
 /* saving progress buttonss */
@@ -208,21 +249,25 @@ table {
 /* alert boxes */
 @keyframes slidein {
   from {opacity: 0; margin-top: -160px;}
-  to {margin-top: -130px;}
+  to {margin-top: -104px;}
 }
 
 @-webkit-keyframes slidein {
   from {opacity: 0; margin-top: -160px;}
-  to {margin-top: -130px;}
+  to {margin-top: -104px;}
 }
 
 .alertBoxWrapper {
   @media (max-width: 40em) {
     margin-top: auto;
+    .alert-box {
+      margin-right: 0;
+    }
   }
   @media (min-width: 40.063em) {
-    margin-top: -175px;
+    margin-top: -104px;
     animation: slidein 2s;
+    -webkit-animation: slidein 2s;
     position: absolute;
     z-index: 9999;
     right: 0;
@@ -316,6 +361,8 @@ footer {
 }
 
 /* display off-canvas menu on =>1600px screens */
+
+/* LEFT AND RIGHT OFF CANVAS MENU */
 .big {
   div.inner-wrap {
     width: 72%;
@@ -328,6 +375,7 @@ footer {
   }
   aside[class*=canvas-menu] {
     width: 20%;
+    transition: width .3s ease;
   }
   section.left-small, section.right-small {
     display: none;
@@ -341,8 +389,23 @@ footer {
     margin-left: 1rem;
   }
   #menu-collapse-btn {
-    right: 1rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
   }
+}
+
+/* LEFT OFF CANVAS MENU */
+.big.left-menu {
+  div.inner-wrap {
+    width: 84%;
+    left: 16%;
+  }
+  aside[class*=canvas-menu] {
+    width: 19.1%;
+  }
+}
+section.tab-bar-section.middle {
+  right: 0;
 }
 
 /* menu collapse button */
@@ -363,3 +426,19 @@ footer {
   .reveal-modal-bg {z-index: 1045;}
   .reveal-modal {z-index: 1050;}
 }
+
+/* EXTRA EXCEPTION CLASSES */
+ i.big {
+  font-size: $base-font-size * 1.5;;
+  &:before { font-size: $base-font-size * 1.5; }
+}
+
+.no-ml {
+  margin-left: 0 !important;
+}
+
+.extra-ml {
+  margin-left: $base-margin / 2;
+}
+/* END EXTRA EXCEPTION CLASSES */
+

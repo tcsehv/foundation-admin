@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9890d492-7b8e-4d41-b7b8-ed3da3299bb5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/_foundation_calendar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/date-helpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/date.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/fileupload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/foundation_calendar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.iframe-transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.ui.widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/string-helpers.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/datepicker.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/_main.scss" afterPath="$PROJECT_DIR$/scss/_main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/_settings.scss" afterPath="$PROJECT_DIR$/scss/_settings.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/_tcs_variables.scss" afterPath="$PROJECT_DIR$/scss/_tcs_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/app.scss" afterPath="$PROJECT_DIR$/scss/app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/build.scss" afterPath="$PROJECT_DIR$/scss/build.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AdminTCS.iws" />
@@ -30,16 +43,79 @@
       <file leaf-file-name="app.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="20" selection-start="209" selection-end="209" vertical-scroll-proportion="-4.5652175" vertical-offset="0" max-vertical-offset="195">
+            <state line="2" column="21" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.3043479" vertical-offset="0" max-vertical-offset="195">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_main.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_main.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/_main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="9" selection-start="3073" selection-end="3073" vertical-scroll-proportion="0.6340249" vertical-offset="1576" max-vertical-offset="5550">
+            <state line="123" column="3" selection-start="2583" selection-end="2583" vertical-scroll-proportion="-12.565217" vertical-offset="1556" max-vertical-offset="6750">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/build.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="20" selection-start="388" selection-end="388" vertical-scroll-proportion="-5.869565" vertical-offset="0" max-vertical-offset="225">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_tcs_variables.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/_tcs_variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="40" selection-start="551" selection-end="551" vertical-scroll-proportion="-14.347826" vertical-offset="0" max-vertical-offset="825">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_settings.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scss/_settings.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="157" column="0" selection-start="5429" selection-end="5429" vertical-scroll-proportion="0.13542527" vertical-offset="2191" max-vertical-offset="15030">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_datepicker.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/_datepicker.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="58" selection-start="528" selection-end="528" vertical-scroll-proportion="-8.478261" vertical-offset="0" max-vertical-offset="285">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_foundation_calendar.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/_foundation_calendar.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="14" selection-start="156" selection-end="156" vertical-scroll-proportion="-7.826087" vertical-offset="0" max-vertical-offset="4650">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="foundation_calendar.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/foundation_calendar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7725">
               <folding />
             </state>
           </provider>
@@ -105,10 +181,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="y" value="28" />
-    <option name="width" value="1357" />
-    <option name="height" value="1348" />
+    <option name="y" value="22" />
+    <option name="width" value="2560" />
+    <option name="height" value="1354" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -136,7 +211,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -151,7 +225,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminTCS" />
+              <option name="myItemId" value="foundation-admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -161,21 +235,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminTCS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminTCS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminTCS" />
+              <option name="myItemId" value="foundation-admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -189,34 +249,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AdminTCS" />
+              <option name="myItemId" value="foundation-admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminTCS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AdminTCS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="min" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,15 +368,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="28" width="1357" height="1348" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="22" width="2560" height="1354" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32369038" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24258555" sideWeight="0.4996016" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24185862" sideWeight="0.4996016" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25117004" sideWeight="0.5003984" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32369038" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -341,12 +384,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -374,9 +417,18 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/scss/foundation/components/_buttons.scss">
+    <entry file="file://$PROJECT_DIR$/scss/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="28" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="3585" />
+        <state line="7" column="20" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="9" selection-start="3073" selection-end="3073" vertical-scroll-proportion="0.0" vertical-offset="1576" max-vertical-offset="5550">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/app.scss">
@@ -399,36 +451,6 @@
     <entry file="file://$PROJECT_DIR$/scss/_settings.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="615" column="14" selection-start="20425" selection-end="20425" vertical-scroll-proportion="0.0" vertical-offset="8840" max-vertical-offset="15000" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/css/foundation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="69030" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/scss/foundation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="934" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/scss/foundation/components/_buttons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="0" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.16540723" vertical-offset="1033" max-vertical-offset="3585" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/scss/foundation/_settings.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="12" selection-start="1091" selection-end="1092" vertical-scroll-proportion="0.3327674" vertical-offset="103" max-vertical-offset="15000" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/scss/foundation/_functions.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="196" selection-end="197" vertical-scroll-proportion="0.15450644" vertical-offset="0" max-vertical-offset="1215" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/scss/foundation/components/_global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="16" selection-start="748" selection-end="757" vertical-scroll-proportion="0.2832618" vertical-offset="0" max-vertical-offset="5910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fonts/Roboto/roboto_condensed_macroman/stylesheet.css">
@@ -456,34 +478,9 @@
         <state line="0" column="0" selection-start="0" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/scss/foundation/components/_type.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="157" selection-end="157" vertical-scroll-proportion="0.06366723" vertical-offset="0" max-vertical-offset="6780" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/js/foundation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2632" column="0" selection-start="90663" selection-end="90663" vertical-scroll-proportion="0.6675084" vertical-offset="38597" max-vertical-offset="60510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/scss/foundation/components/_panels.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="172" selection-end="188" vertical-scroll-proportion="0.10695187" vertical-offset="0" max-vertical-offset="1380" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/js/foundation/foundation.offcanvas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="32" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.44925123" vertical-offset="0" max-vertical-offset="1202" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9975" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/foundation/js/foundation/foundation.reveal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="1668" selection-end="1668" vertical-scroll-proportion="-0.72357726" vertical-offset="1925" max-vertical-offset="5295" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/select2/select2.css">
@@ -541,11 +538,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1238" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/datepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="989" column="44" selection-start="42744" selection-end="42744" vertical-scroll-proportion="0.36429724" vertical-offset="14039" max-vertical-offset="15300" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/modernizr.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="25" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.38772213" vertical-offset="0" max-vertical-offset="21180" />
@@ -566,11 +558,6 @@
         <state line="152" column="40" selection-start="6258" selection-end="6261" vertical-scroll-proportion="0.79012346" vertical-offset="1320" max-vertical-offset="2535" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_datepicker.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/min/total.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="334163" selection-end="334163" vertical-scroll-proportion="0.012345679" vertical-offset="0" max-vertical-offset="1215" />
@@ -579,26 +566,6 @@
     <entry file="file://$PROJECT_DIR$/Dashboard_1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="6390" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_tcs_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="197" selection-end="216" vertical-scroll-proportion="0.13819095" vertical-offset="0" max-vertical-offset="1194" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_settings.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="19" selection-start="6033" selection-end="6033" vertical-scroll-proportion="0.4229452" vertical-offset="2191" max-vertical-offset="15030" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="0" selection-end="152899" vertical-scroll-proportion="0.012345679" vertical-offset="0" max-vertical-offset="1215" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/build.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="20" selection-start="209" selection-end="209" vertical-scroll-proportion="0.08699255" vertical-offset="0" max-vertical-offset="1207" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/_jstree.scss">
@@ -611,26 +578,79 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="51" selection-start="611" selection-end="611" vertical-scroll-proportion="0.15879479" vertical-offset="0" max-vertical-offset="1980" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.099585064" vertical-offset="0" max-vertical-offset="1205" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/date-helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="60" selection-start="2792" selection-end="2795" vertical-scroll-proportion="1.1426256" vertical-offset="0" max-vertical-offset="2415">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_datepicker.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="58" selection-start="528" selection-end="528" vertical-scroll-proportion="-8.478261" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scss/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="20" selection-start="209" selection-end="209" vertical-scroll-proportion="-4.5652175" vertical-offset="0" max-vertical-offset="195">
+        <state line="2" column="21" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.3043479" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/build.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="388" selection-end="388" vertical-scroll-proportion="-5.869565" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/foundation_calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_foundation_calendar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="14" selection-start="156" selection-end="156" vertical-scroll-proportion="-7.826087" vertical-offset="0" max-vertical-offset="4650">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/_main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="9" selection-start="3073" selection-end="3073" vertical-scroll-proportion="0.6340249" vertical-offset="1576" max-vertical-offset="5550">
+        <state line="123" column="3" selection-start="2583" selection-end="2583" vertical-scroll-proportion="-12.565217" vertical-offset="1556" max-vertical-offset="6750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_tcs_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="40" selection-start="551" selection-end="551" vertical-scroll-proportion="-14.347826" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_settings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="0" selection-start="5429" selection-end="5429" vertical-scroll-proportion="0.13542527" vertical-offset="2191" max-vertical-offset="15030">
           <folding />
         </state>
       </provider>

@@ -20,12 +20,6 @@ $(document).ready( function() {
     });
 
     // Menu collapse switcher
-    // Set unique href
-    $('.panel').each(function (i) {
-        $(this).find('.panel-nav a').attr('href', '#panel-'+ i);
-        $(this).find('.contentWrapper .content').attr('id', 'panel-'+ i);
-    });
-
     $("#menu-collapse-btn").on("click", function(){
         var content = $("div.off-canvas-wrap");
         if (content.hasClass("move-right big")){
@@ -44,6 +38,13 @@ $(document).ready( function() {
     });
 
     // Accordion panels
+    $('.panel').each(function (i) {
+        $(this).find('.panel-nav a').attr('href', '#panel-'+ i);
+        if( i == 0) {
+            $(this).find('.contentWrapper .content').attr('id', 'panel-'+ i);
+        }
+    });
+
     $('.panel-nav').find("a[href^='#panel']").on('click', function () {
         var content = $(this).closest("div.panel").find("div.contentWrapper");
         if (content.hasClass("active")) {
@@ -66,10 +67,52 @@ $(document).ready( function() {
         return false;
     });
 
-        // Set datepicker
-     $('#datepicker1').fdatepicker();
+    // Remove button function for input fields
+    function FieldRemoveBtn(parent){
+        $("<a class='button tiny alert absolute'><i class='fi-x'></i></a>").appendTo(parent);
+        $('a.alert.absolute').on('click', function(){
+            $(this).closest('.row').remove();
+        });
+    }
 
-     // Set JStree
+    // Add remove button to existing fields
+    $('div.rowWrapper').find('input[id^="item"]').each(function(i){
+        if(i != 0) {
+            FieldRemoveBtn($(this).closest('.row'));
+        }
+    });
+
+    // Get previous row in div.rowWrapper
+    var lastRow = $("div.rowWrapper div.row:last-child").clone();
+
+    // Add adstypesfields
+    $("a.adField").on("click", function(event){
+       event.preventDefault();
+
+       var inputVal = lastRow.find('input').attr('id').substring(4);
+       var curNum = parseInt(inputVal);
+
+       var newRow = lastRow.clone();
+       newRow.find('input').attr("id", "item" + (curNum + 1))
+       .attr("name", "item" + (curNum + 1))
+       .closest("div.row").find('label').attr("for", "item" + (curNum + 1));
+        newRow.find('input').removeAttr('value');
+        newRow.appendTo("div.rowWrapper");
+
+        lastRow = newRow;
+        FieldRemoveBtn(lastRow);
+    });
+
+    // Remove values in closest form
+    $("button.removeVal").on('click', function(e){
+        e.preventDefault();
+        $(this).closest('form').find('input').each(function(){
+            console.log($(this));
+            $(this).removeAttr('value');
+        });
+    });
+
+    /*     // Set JStree
      $('#tree').jstree({
      'core' : {
      'data' : [
@@ -122,5 +165,5 @@ $(document).ready( function() {
     // Select2
     $("#select2example").select2({
         placeholder: "Select a country"
-    });
+    });*/
 });
